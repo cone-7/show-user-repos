@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import UserInfo from "./userInfo.jsx";
 import UserReposInfo from "./userReposInfo.jsx";
 import ButtonComponent from "./button.jsx";
+import "./styles/main.css"
 
 export default class MainComponent extends React.Component {
 
@@ -32,8 +33,8 @@ export default class MainComponent extends React.Component {
 
 	render() { 
 		return ( 
-			<div className="body"> 
-				Nombre:<input id='name' onChange={this.handleChange.bind(this)} 
+			<div className="header"> 
+				User Github:<input id='name' onChange={this.handleChange.bind(this)} 
 					value={this.state.userGithub} type="text"></input>
 				<ButtonComponent onClick={this.getInfoUser}>Enviar</ButtonComponent>
 				<UserInfo user={this.state.userGithub}/>
